@@ -35,8 +35,10 @@ println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension); //
 //Ratio "0.667" similar to style="height:auto" (websites)
 imageX = displayWidth*0;
 imageY = displayHeight*0;
-imageWidth = displayWidth;
-imageHeight = displayHeight;
+imageWidth = displayWidth*imageWidthRatio;
+imageHeight = displayHeight*imageHeightRatio;
+if (imageWidth > displayWidth) println("ERROR: Image is too wide") ; //Simple Display Checker
+if (imageHeight >displayHeight) println("ERROR: Image is too high") ; //Simple Display Checker
 
 //
 //Rectangle Layout
