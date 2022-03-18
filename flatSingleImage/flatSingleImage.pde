@@ -1,6 +1,6 @@
 //Global Variables
-float imageX, imageY, imageWidth, imageHeight, imageWidthRatio=0, imageHeightRatio=0;
-int largerDimension, smallerDimension;
+float imageX, imageY, imageWidth, imageHeight, imageWidthRatio=0.0, imageHeightRatio=0.0;
+float largerDimension, smallerDimension;
 PImage pic;
 Boolean widthLarger=false, heightLarger=false;
 
@@ -22,13 +22,17 @@ int picHeight = 1280;
   smallerDimension = picWidth;
   heightLarger = true;
 }//End Dimensions Comparison 
-//println(smallerDimension, largerDimension); //Verifying Variable details
+println(smallerDimension, largerDimension, widthLarger, heightLarger); //Verifying Variable details
 //Note: single line IFs can be summarized to IF-ELSE or IF-ELSEIF-ELSE
-if ( widthLarger == true) imageWidthRatio = largerDimension / largerDimension;
-if ( widthLarger == true) imageHeightRatio = smallerDimension / largerDimension;
+if ( widthLarger == true) imageWidthRatio = largerDimension / largerDimension ;
+if ( widthLarger == true) imageHeightRatio = smallerDimension / largerDimension ;
 if ( heightLarger == true) imageHeightRatio = largerDimension / largerDimension;
 if ( heightLarger == true) imageWidthRatio = smallerDimension / largerDimension;
-println(imageWidthRatio, ImageHeightRatio); //Verify Variable Values
+println(imageWidthRatio, imageHeightRatio, smallerDimension/largerDimension); //Verify Variable Values
+//Note: println() also verifies decimal places, compiler will truncate
+// Answers must be 1.0 and between 0 & 1 (decimal)
+//Ratio 1.0 similar to style="width:100%" (websites)
+//Ratio "0.667" similar to style="height:auto" (websites)
 imageX = displayWidth*0;
 imageY = displayHeight*0;
 imageWidth = displayWidth;
