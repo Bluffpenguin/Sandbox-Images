@@ -18,14 +18,15 @@ int pic2Width = 3106;
 int pic2Height = 4426;
 int largerPic1Dimension, smallerPic1Dimension;
 int largerPic2Dimension, smallerPic2Dimension;
+float imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2;
 Boolean widthPic1Larger=false, heightPic1Larger=false;
 Boolean widthPic2Larger=false, heightPic2Larger=false;
 //
-if (pic1Width >= pic1Height) {
+if (pic1Width >= pic1Height) { //ID Larger Dimension: Landscape and Square
   largerPic1Dimension = pic1Width;
   smallerPic1Dimension = pic1Height;
   widthPic1Larger = true;
-} else {
+} else { //ID Larger Dimension: Portrait
   largerPic1Dimension = pic1Height;
   smallerPic1Dimension = pic1Width;
   heightPic1Larger = true;
@@ -40,6 +41,17 @@ if (pic2Width >= pic2Height) {
   smallerPic2Dimension = pic2Width;
   heightPic2Larger = true;
 } //End pic2 larger dimension ID
+println (smallerPic1Dimension, largerPic1Dimension, smallerPic2Dimension, largerPic2Dimension); //Verifying Variable Details 
+//
+if (widthPic1Larger == true) imageWidthRatioPic1 = largerPic1Dimension / largerPic1Dimension;
+if (widthPic1Larger == true ) imageHeightRatioPic1 = smallerPic1Dimension / largerPic1Dimension;
+if ( heightPic1Larger == true) imageWidthRatioPic1 = smallerPic1Dimension / largerPic1Dimension;
+if ( heightPic1Larger == true) imageHeightRatioPic1 = largerPic1Dimension / largerPic1Dimension;
+if ( widthPic1Larger == true ) imageWidthRatioPic2 = largerPic2Dimension / largerPic2Dimension;;
+if ( widthPic1Larger == true ) imageHeightRatioPic2 = smallerPic2Dimension / largerPic2Dimension;
+if ( heightPic1Larger == true ) imageWidthRatioPic2 = smallerPic2Dimension / largerPic2Dimension;
+if ( heightPic1Larger == true ) imageHeightRatioPic2 = largerPic2Dimension / largerPic2Dimension;
+println (imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2); //Verifying Variable Details (Ratios)
 //
 rectXPic1 = displayWidth*1/4;
 rectYPic1 = displayHeight*0;
