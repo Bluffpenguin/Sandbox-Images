@@ -17,7 +17,9 @@ int pic1Height = 1280;
 int pic2Width = 3106;
 int pic2Height = 4426;
 int largerPic1Dimension, smallerPic1Dimension;
-Boolean widthPic1Larger, heightPic1Larger;
+int largerPic2Dimension, smallerPic2Dimension;
+Boolean widthPic1Larger=false, heightPic1Larger=false;
+Boolean widthPic2Larger=false, heightPic2Larger=false;
 //
 if (pic1Width >= pic1Height) {
   largerPic1Dimension = pic1Width;
@@ -29,8 +31,14 @@ if (pic1Width >= pic1Height) {
   heightPic1Larger = true;
 } //End pic1 larger dimension ID
 //
-if () {
+if (pic2Width >= pic2Height) {
+  largerPic2Dimension = pic2Width;
+  smallerPic2Dimension = pic2Height;
+  widthPic2Larger = true;
 } else {
+  largerPic2Dimension = pic2Height;
+  smallerPic2Dimension = pic2Width;
+  heightPic2Larger = true;
 } //End pic2 larger dimension ID
 //
 rectXPic1 = displayWidth*1/4;
