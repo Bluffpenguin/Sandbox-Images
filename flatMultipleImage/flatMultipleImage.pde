@@ -23,5 +23,5 @@ rectHeightPic2 = displayHeight*1/2;
 //Rectantle Layout and Image Printing on Canvas
 rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation
-//image(pic1);
-//image(pic2);
+image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
+image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
