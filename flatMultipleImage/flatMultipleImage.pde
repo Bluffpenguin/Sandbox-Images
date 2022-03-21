@@ -11,6 +11,12 @@ fullScreen(); //size(900, 680); displayWidth, displayHeight
 pic1 = loadImage("cat-gf218cc4a9_1920.jpg"); //Dimensions: width 1920, height 1280
 pic2 = loadImage("cat_cat_face_cats_eyes.jpg"); //Dimensions: width 3106, height 4426
 //
+//Aspect Ratio Calculation
+int pic1Width = 1920;
+int pic1Height = 1280;
+int pic2Width = 3106;
+int pic2Height = 4426;
+//
 rectXPic1 = displayWidth*1/4;
 rectYPic1 = displayHeight*0;
 rectWidthPic1 = displayWidth*1/2;
