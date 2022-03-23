@@ -52,10 +52,6 @@ if ( widthPic2Larger == true ) imageHeightRatioPic2 = float(smallerPic2Dimension
 if ( heightPic2Larger == true ) imageWidthRatioPic2 = float(smallerPic2Dimension) / float(largerPic2Dimension);
 if ( heightPic2Larger == true ) imageHeightRatioPic2 = float(largerPic2Dimension) / float(largerPic2Dimension);
 println (imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2); //Verifying Variable Details (Ratios)
-float pic1WidthAdjusted = pic1Width;
-float pic1HeightAdjusted = pic1Height;
-float pic2WidthAdjusted = pic2Width;
-float pic2HeightAdjusted = pic2Height;
 //
 rectXPic1 = displayWidth*1/4;
 rectYPic1 = displayHeight*0;
@@ -72,11 +68,16 @@ pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
 pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
 pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
 pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+println (rectWidthPic1, rectHeightPic1, rectWidthPic2, rectHeightPic2);
+println (pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
 //
 //Rectantle Layout and Image Printing on Canvas
 fill(red);
-rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
-rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation
-image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+//rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
+//rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation
+// Image using Rect() Variables
+//image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
 //image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+// Change the Rect() Variables to Aspect Ratio
+image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
 image(pic2, rectXPic2*1.9, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
