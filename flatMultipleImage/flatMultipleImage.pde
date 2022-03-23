@@ -80,6 +80,7 @@ rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape 
 //image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
 // Change the Rect() Variables to Aspect Ratio
 image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+println ("Image one looks good, put some text underneath it to fill in the space"); // Great Design Change for Aspect
 //image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
 //Center Image in rect(), pic2
 image(pic2, rectXPic2+(rectXPic2*9/10), rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
